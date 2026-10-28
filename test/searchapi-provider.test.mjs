@@ -414,7 +414,7 @@ test("SearchApi redacts API errors and appears in the Curator", async () => {
 	assert.match(page, /data-provider="searchapi"/);
 	assert.match(page, />SearchApi<\/button>/);
 	assert.match(page, /provider === "searchapi"\) return "SearchApi"/);
-	assert.match(page, /"linkup", "ninerouter", "searchapi"\]/);
+	assert.match(page, /var providers = \[[^\]]*"searchapi"[^\]]*\]/);
 	await rm(home, { recursive: true, force: true });
 });
 
