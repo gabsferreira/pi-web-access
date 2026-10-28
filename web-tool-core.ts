@@ -72,6 +72,8 @@ export interface WebSearchConfig {
 	ninerouterBaseUrl?: unknown;
 	ninerouterApiKey?: unknown;
 	ninerouterProvider?: unknown;
+	searchapiApiKey?: unknown;
+	searchapiBaseUrl?: unknown;
 	deepseekApiKey?: unknown;
 	degoogBaseUrl?: unknown;
 	degoogApiKey?: unknown;

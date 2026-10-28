@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Added
+
+- Search Google through [SearchApi](https://www.searchapi.io) with `provider: "searchapi"`, configured with `searchapiApiKey` or `SEARCHAPI_API_KEY` (and an optional `searchapiBaseUrl` gateway). It is explicit-only: never chosen by `auto` or `provider: "all"`, but it can be the named provider or part of `searchRouting`. Domain filters become `site:` clauses and recency maps to `time_period`.
+
 ## [0.45.0] - 2026-10-25
 
 ### Highlights
