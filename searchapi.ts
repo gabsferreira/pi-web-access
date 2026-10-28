@@ -154,7 +154,8 @@ export async function searchWithSearchApi(query: string, options: SearchOptions 
 		try {
 			rawData = await response.json();
 		} catch (err) {
-			if (err instanceof Error && err.name === "TimeoutError") throw err;
+			// Only a parse failure is invalid JSON; a dropped connection or timeout keeps its own classification.
+			if (!(err instanceof SyntaxError)) throw err;
 			throw new Error(`SearchApi returned invalid JSON: ${errorMessage(err)}`);
 		}
 		entries = parseResponse(rawData);
